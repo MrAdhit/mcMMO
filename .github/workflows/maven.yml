@@ -50,3 +50,9 @@ jobs:
     # 4. Build via Maven 
     - name: Build via Maven
       run: mvn verify -B --file pom.xml
+      
+    - name: Step 3 - Use the Upload Artifact GitHub Action
+      uses: actions/upload-artifact@v2
+      with: 
+        name: assets-for-download
+        path: downloads
